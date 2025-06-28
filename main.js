@@ -41,9 +41,9 @@ app.put("/books/:id", (req,res) =>{
 app.delete("/books/:id", (req,res) =>{
   const {id} = req.params;
   const  book = Books.filter((book) => book.id === id);
-  if(!book) res.status(404).json("Book not found");
-  Books = Books.filter((book) => book.id !== id);
-  res.json(Books)
+  if(!book) res.status(404).json("Book not found ");
+  Books =  Books.filter((book) => book.id !== id);
+  res.json("book deleted")
 
 })
 
